@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="checking-method"></p>
+    <input id="name-input-field" type="text" />
+    <button id="update-name">Update</button>
+    <button onclick="hundleJustFunctionClick()">Just Function</button>
+    <button id="handle-event-directly">Direct add event listener</button>
+
+    <script>
+      function hundleJustFunctionClick() {
+        const clickingMethod = document.getElementById("checking-method");
+        clickingMethod.innerText = "Set by just using function";
+      }
+
+      //   directly add event
+      document
+        .getElementById("handle-event-directly")
+        .addEventListener("click", function () {
+          const clickingMethod = document.getElementById("checking-method");
+          clickingMethod.innerText = "Set by just using direct method";
+        });
+
+      //directlly
+      document
+        .getElementById("update-name")
+        .addEventListener("click", function () {
+          const nameField = document.getElementById("name-input-field");
+
+          const clickingMethod = document.getElementById("checking-method");
+          clickingMethod.innerText = nameField.value;
+          nameField.value = "";
+        });
+    </script>
+  </body>
+</html>
