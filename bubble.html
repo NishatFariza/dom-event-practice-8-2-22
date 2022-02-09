@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="section-container">
+      <h2>Event Bubble</h2>
+      <ul id="list-container">
+        <li class="item">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, non eum
+          quisquam alias repellat aliquid dolores eius mollitia quas quod ex
+          quasi reiciendis consectetur, at repudiandae eos impedit rem
+          explicabo!
+        </li>
+        <li id="second-item" class="item">
+          Consectetur consequuntur et incidunt atque, at cupiditate laudantium
+          modi culpa a deleniti magnam quidem nesciunt tempore repudiandae
+          voluptate, maiores autem non! Vitae alias et ad corrupti
+          exercitationem expedita dolore dolorum.
+        </li>
+        <li class="item">
+          Beatae dolor harum ea, perferendis adipisci rerum, blanditiis nihil
+          commodi minus earum molestias dolorem odio ut rem doloribus provident
+          eveniet perspiciatis, modi suscipit eos sint recusandae? Perferendis
+          deleniti quas earum.
+        </li>
+        <li class="item">
+          Deleniti doloremque temporibus culpa dignissimos eveniet itaque
+          cupiditate odio tempora recusandae facilis assumenda molestiae
+          reiciendis dolores consectetur hic consequatur nisi, et sint explicabo
+          eligendi possimus eos aspernatur. Accusamus, molestias hic.
+        </li>
+        <li class="item">
+          Aliquid quidem ex corrupti totam cupiditate consequatur. Dicta iure
+          asperiores ipsam repellendus earum. Alias ea quas earum, adipisci iste
+          molestias quibusdam quisquam, voluptatibus deleniti, totam saepe
+          cumque ipsam voluptatum? Quo.
+        </li>
+        <li class="item">
+          Odio velit voluptatibus exercitationem molestias nam dignissimos.
+          Amet, perferendis quibusdam. Quasi explicabo eius asperiores quas enim
+          illo maiores rerum consequatur a eveniet, magni consequuntur,
+          accusamus ex tempore, unde molestiae atque!
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      //li click
+      document
+        .getElementById("second-item")
+        .addEventListener("click", function () {
+          console.log("second item clicked");
+        });
+      //ul click
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function () {
+          console.log("ul clicked");
+        });
+      //section click
+      document
+        .getElementById("section-container")
+        .addEventListener("click", function () {
+          console.log("section clicked");
+        });
+    </script>
+  </body>
+</html>
