@@ -20,9 +20,9 @@
     <script>
       const items = document.getElementsByClassName("item");
       for (item of items) {
-        item.addEventListener("click", function () {
-          document.getElementById("item-container").removeChild(item);
-          // event.target.parentNode.removechild(event.target); //ey line ta bojhi nai
+        item.addEventListener("click", function (event) {
+          // document.getElementById("item-container").removeChild(item);
+          event.target.parentNode.removeChild(event.target); //ey line ta bojhi nai
         });
       }
 
@@ -34,6 +34,11 @@
 
           const parent = document.getElementById("item-container");
           parent.appendChild(li);
+        });
+      document
+        .getElementById("item-container")
+        .addEventListener("click", function (event) {
+          event.target.parentNode.removeChild(event.target);
         });
     </script>
   </body>
