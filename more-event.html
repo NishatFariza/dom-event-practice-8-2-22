@@ -50,9 +50,9 @@
         .addEventListener("keyup", function (event) {
           const deleteBtn = document.getElementById("delete-button");
           if (event.target.value == "delete") {
-            deleteBtn.removeAttribute("disable");
+            deleteBtn.removeAttribute("disabled");
           } else {
-            deleteBtn.setAttribute("disable", true);
+            deleteBtn.setAttribute("disabled", true);
           }
         });
       //change input button

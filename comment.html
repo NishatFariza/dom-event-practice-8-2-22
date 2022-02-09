@@ -10,7 +10,7 @@
     <h2>Add your comment please!!</h2>
     <section>
       <h4>Add your comment</h4>
-      <div class="comment-container">
+      <div id="comment-container">
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt,
           sed. Tenetur iusto hic magni eveniet fugiat quas nesciunt aperiam
@@ -43,12 +43,15 @@
 
           //new element add
           const newComment = document.createElement("p");
+          // const newCommentValue = commentBox.value;
           newComment.innerText = commentBox.value;
+          // newComment.innerText = newCommentValue;
 
           //append the comment
 
           const commentContainer = document.getElementById("comment-container");
           commentContainer.appendChild(newComment);
+          // console.log(commentContainer);
 
           commentBox.value = "";
         });
