@@ -8,23 +8,25 @@
   </head>
   <body>
     <h2>Event Delegate</h2>
-    <ul id="item-container">
-      <li class="item">Lorem, ipsum dolor.</li>
-      <li class="item">Recusandae, eos dolores.</li>
-      <li class="item">Illum, voluptatum dolorum!</li>
-      <li class="item">Illum, voluptatum dolorum!</li>
-      <li class="item">Illum, voluptatum dolorum!</li>
-    </ul>
+    <div>
+      <ul id="item-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Recusandae, eos dolores.</li>
+        <li class="item">Illum, voluptatum dolorum!</li>
+        <li class="item">Illum, voluptatum dolorum!</li>
+        <li class="item">Illum, voluptatum dolorum!</li>
+      </ul>
+    </div>
     <button id="add-item">Add Item</button>
 
     <script>
-      const items = document.getElementsByClassName("item");
-      for (item of items) {
-        item.addEventListener("click", function (event) {
-          // document.getElementById("item-container").removeChild(item);
-          event.target.parentNode.removeChild(event.target); //ey line ta bojhi nai
-        });
-      }
+      // const items = document.getElementsByClassName("item");
+      // for (item of items) {
+      //   item.addEventListener("click", function (event) {
+      //     // document.getElementById("item-container").removeChild(item);
+      //     event.target.parentNode.removeChild(event.target); //ey line ta bojhi nai
+      //   });
+      // }
 
       document
         .getElementById("add-item")
@@ -35,9 +37,11 @@
           const parent = document.getElementById("item-container");
           parent.appendChild(li);
         });
+      let counter = 0;
       document
         .getElementById("item-container")
         .addEventListener("click", function (event) {
+          console.log(event.target, event.target.parentNode);
           event.target.parentNode.removeChild(event.target);
         });
     </script>
